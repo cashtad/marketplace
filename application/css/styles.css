@@ -1,0 +1,113 @@
+/* core/css/styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    transition: box-shadow 0.3s;
+    margin-bottom: 20px; /* Отступ снизу между карточками */
+    max-height: 500px; /* Ограничение максимальной высоты карточек */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Добавляем отступ снизу между карточками */
+.card:not(:last-child) {
+    margin-bottom: 30px; /* Измените на ваш желаемый отступ */
+}
+
+.card:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+
+.card-text {
+    color: #666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.card-text:hover {
+    overflow: visible;
+    white-space: normal;
+}
+
+/* Добавляем всплывающую подсказку над карточкой */
+.card-text[title]:hover:after {
+    content: attr(title);
+    position: absolute;
+    left: 0;
+    bottom: 100%; /* Располагаем подсказку над карточкой */
+    white-space: normal;
+    padding: 5px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.card img {
+    max-width: 100%;
+    max-height: 200px; /* Укажите желаемую высоту */
+    min-height: 200px;
+    height: auto;
+    object-fit: contain; /* Сохраняет соотношение сторон и обрезает лишнее */
+}
+
+.btn {
+    margin-top: 10px;
+}
+
+.flex-fill {
+    flex: 1 1 auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.jumbotron {
+    background-color: #f8f9fa;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.reviews {
+    padding: 4rem 0;
+}
+
+.review-card {
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+}
+
+.review-card:hover {
+    transform: scale(1.05);
+}
